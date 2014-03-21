@@ -9,6 +9,7 @@ gem 'activerecord'
 
 group :development, :test do
   gem 'rake'
+  gem 'rack-env'
   gem 'sqlite3'
   gem 'foreman'
 end
