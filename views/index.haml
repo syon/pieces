@@ -1,2 +1,9 @@
 %h1
   #{@say}
+
+%p
+  #{@allusers}
+
+%form{:action=>"/", :method=>"post"}
+  %input{:type=>"texfield",:name=>"registration_id"}
+  %input{:type=>"submit", :value=>"send"}

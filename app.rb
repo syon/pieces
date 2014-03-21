@@ -1,9 +1,25 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'active_record'
+
+ActiveRecord::Base.configurations = YAML.load_file('database.yml')
+ActiveRecord::Base.establish_connection('development') #ENV['RACK_ENV']
+
+class User < ActiveRecord::Base
+end
 
 get '/' do
   @say = "Hello World."
+  @allusers = User.all.to_json
   haml :index
+end
+
+post '/' do
+  user = User.new
+  user.registration_id = params[:registration_id]
+  user.save!
+  status 202
+  redirect '/'
 end
 
 get '/initializr' do
