@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require 'active_record'
 
 ActiveRecord::Base.configurations = YAML.load_file('database.yml')
-ActiveRecord::Base.establish_connection('development') #ENV['RACK_ENV']
+ActiveRecord::Base.establish_connection(ENV['RACK_ENV'])
 
 class User < ActiveRecord::Base
 end
