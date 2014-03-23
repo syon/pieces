@@ -1,70 +1,86 @@
-.navbar.navbar-inverse.navbar-fixed-top
-  .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", type: "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{href: "#"} Project name
-    .navbar-collapse.collapse
-      %ul.nav.navbar-nav
-        %li.active
-          %a{href: "#"} Home
-        %li
-          %a{href: "#about"} About
-        %li
-          %a{href: "#contact"} Contact
-        %li.dropdown
-          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
-            Dropdown
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{href: "#"} Action
-            %li
-              %a{href: "#"} Another action
-            %li
-              %a{href: "#"} Something else here
-            %li.divider
-            %li.dropdown-header Nav header
-            %li
-              %a{href: "#"} Separated link
-            %li
-              %a{href: "#"} One more separated link
-      %form.navbar-form.navbar-right
-        .form-group
-          %input.form-control{placeholder: "Email", type: "text"}/
-        .form-group
-          %input.form-control{placeholder: "Password", type: "password"}/
-        %button.btn.btn-success{type: "submit"} Sign in
-    / /.navbar-collapse
+- content_for :title do "Words of Blessings" end
+- content_for :webfont do
+  %link{href: "//fonts.googleapis.com/css?family=Great+Vibes:400", rel: "stylesheet", type: "text/css"}
+- content_for :pagecss do
+  :css
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, YuGothic, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    }
+    .jumbotron h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 100px;
+    }
+    .messages {
+      font-size: 28px;
+      color: #444;
+    }
+    hr.wedding {
+      padding: 0;
+      border: none;
+      border-top: medium double #ca6;
+      color: #ca6;
+      text-align: center;
+    }
+    hr.wedding:after {
+      content: "Wedding";
+      font-family: 'Great Vibes', cursive;
+      display: inline-block;
+      position: relative;
+      top: -0.7em;
+      font-size: 1.5em;
+      padding: 0 0.5em;
+      background: white;
+    }
+    .messages h3:after {
+      content: " ";
+      display: block;
+      position: relative;
+      top: -30px;
+      border-bottom: 4px solid #ca6;
+    }
+    .messages dl {
+      margin: 3em 0;
+    }
+    .messages dl dt {
+      letter-spacing: -1px;
+    }
+    .messages dl dd {
+      font-size: 42px;
+      color: #444;
+      font-family: 'Great Vibes', cursive;
+      padding: 5px;
+    }
+
+
 / Main jumbotron for a primary marketing message or call to action
 .jumbotron
-  .container
-    %h1 Hello, world!
+  .container.text-center
+    %h1 Words of Blessings
     %p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-    %p
-      %a.btn.btn-primary.btn-lg Learn more »
-.container
-  / Example row of columns
-  .row
-    .col-lg-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-default{href: "#"} View details »
-    .col-lg-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-default{href: "#"} View details »
-    .col-lg-4
-      %h2 Heading
-      %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      %p
-        %a.btn.btn-default{href: "#"} View details »
 
-      %hr/
-      %footer
-        %p © Company 2013
-/ /container
+.container.text-center
+  .row
+    .col-md-12.messages
+      %hr.wedding
+      %dl
+        %dt ご結婚おめでとうございます
+        %dd Happy Wedding
+      %dl
+        %dt 末永くお幸せに
+        %dd I wish your Love grow Forever
+      %dl
+        %dt 結婚の日が、永遠に続く幸福の新しい始まりの日となりますように
+        %dd May your wedding day be a new beginning to everlasting happiness
+      %dl
+        %dt お二人の永遠の愛と絆をお祈りします
+        %dd Wishing you both everlasting Love & Togetherness
+    /
+      %dl
+        %dt 日本語文
+        %dd English sentence
+
+
+  %hr
+  %footer
+    /
+      %p © Company 2013

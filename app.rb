@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require "sinatra/content_for"
 require 'active_record'
 
 ENV['RACK_ENV'] = "development" if ENV['RACK_ENV'] == nil
