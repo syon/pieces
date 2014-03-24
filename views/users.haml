@@ -1,0 +1,21 @@
+- content_for :title do "users" end
+.container
+  %table.table
+    %tr
+      %th id
+      %th registration_id
+      %th created_at
+      %th updated_at
+
+    - @allusers.each do |usr|
+      %tr
+        %td= usr.id
+        %td= usr.registration_id
+        %td= usr.created_at
+        %td= usr.updated_at
+
+  %form.form-inline{action: "/users", method: "post", role: "form"}
+    .form-group
+      %label.sr-only{for: "registration_id"} registration_id
+      %input#registration_id.form-control{name: "registration_id", placeholder: "Enter registration_id", type: "text"}
+    %button.btn.btn-default{type: "submit"} submit
