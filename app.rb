@@ -31,7 +31,12 @@ end
 
 post '/users' do
   user = User.new
-  user.registration_id = params[:registration_id]
-  user.save!
+  reg_id = params[:registration_id]
+  if reg_id == "clear"
+    User.destroy_all
+  else
+    user.registration_id = reg_id
+    user.save!
+  end
   redirect '/users'
 end
