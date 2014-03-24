@@ -7,6 +7,10 @@ ENV['RACK_ENV'] = "development" if ENV['RACK_ENV'].nil?
 ActiveRecord::Base.configurations = YAML.load_file('database.yml')
 ActiveRecord::Base.establish_connection(ENV['RACK_ENV'])
 
+after do
+  ActiveRecord::Base.connection.close
+end
+
 class User < ActiveRecord::Base
 end
 
