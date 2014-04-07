@@ -1,8 +1,8 @@
-pieces
+Pieces
 ======
 
 http://syon-pieces.herokuapp.com/
 
-http://syon-pieces.herokuapp.com/initializr
+* [initializr](http://syon-pieces.herokuapp.com/initializr)
 
-http://syon-pieces.herokuapp.com/users
+* [users](http://syon-pieces.herokuapp.com/users)
