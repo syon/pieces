@@ -1,0 +1,58 @@
+- content_for :title do "心に響く言葉" end
+- content_for :webfont do
+  %link{href: "//fonts.googleapis.com/css?family=Great+Vibes:400", rel: "stylesheet", type: "text/css"}
+- content_for :pagecss do
+  :css
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, YuMincho, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    }
+    .jumbotron h1 {
+      font-family: inherit;
+      font-size: 48px;
+    }
+    .messages {
+      font-size: 24px;
+      color: #444;
+    }
+    .messages h3:after {
+      content: " ";
+      display: block;
+      position: relative;
+      top: -30px;
+      border-bottom: 4px solid #ca6;
+    }
+    .messages dl {
+      margin: 3em 0;
+    }
+    .messages dl dt {
+      letter-spacing: -1px;
+    }
+    .messages dl dd {
+      font-size: 42px;
+      color: #444;
+      font-family: 'Great Vibes', cursive;
+      padding: 5px;
+    }
+
+
+/ Main jumbotron for a primary marketing message or call to action
+.jumbotron
+  .container.text-center
+    %h1 心に響く言葉
+    %p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+
+.container.text-center
+  .row
+    .col-md-12.messages
+      %dl
+        %dt 「好きなことをやって生きる」というのは、欲望のままに生きることではない。好きなことと社会との接点を探し続ける、長く苦しい道のりことを言う。
+    /
+      %dl
+        %dt 日本語文
+        %dd English sentence
+
+
+  %hr
+  %footer
+    /
+      %p © Company 2013

@@ -24,6 +24,10 @@ get '/words/bless' do
   haml :"words/bless"
 end
 
+get '/words/adage' do
+  haml :"words/adage"
+end
+
 get '/users' do
   @allusers = User.all
   haml :users
