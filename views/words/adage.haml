@@ -10,6 +10,9 @@
       font-family: inherit;
       font-size: 48px;
     }
+    #adages {
+      max-width: 700px;
+    }
     .messages {
       font-size: 24px;
       color: #444;
@@ -28,10 +31,12 @@
       letter-spacing: -1px;
     }
     .messages dl dd {
-      font-size: 42px;
+      font-size: 24px;
       color: #444;
-      font-family: 'Great Vibes', cursive;
       padding: 5px;
+    }
+    .messages dl dd a {
+      color: inherit;
     }
 
 
@@ -41,12 +46,13 @@
     %h1 心に響く言葉
     %p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
 
-.container.text-center
-  .row
-    .col-md-12.messages
+.container
+  #adages.row.center-block
+    .col-md-12.clearfix.messages
       %dl
-        %dt 「好きなことをやって生きる」というのは、欲望のままに生きることではない。好きなことと社会との接点を探し続ける、長く苦しい道のりことを言う。
-        %dd https://twitter.com/Yam_eye/status/454982280461975552
+        %dt 「好きなことをやって生きる」というのは、欲望のままに生きることではない。好きなことと社会との接点を探し続ける、長く苦しい道のりのことを言う。
+        %dd
+          %a{href: "https://twitter.com/Yam_eye/status/454982280461975552"} @Yam_eye
     /
       %dl
         %dt 日本語文
