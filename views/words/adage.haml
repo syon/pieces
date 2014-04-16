@@ -6,11 +6,11 @@
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, YuMincho, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
       background-color: #eee;
-    }
-    #header {
-      background: #303e54 url(./images/adage_header.jpg) no-repeat center top;
+      background: #303e54 url(./images/StarryLake.jpg) no-repeat center top;
       background-size: cover;
       background-attachment: fixed;
+    }
+    #header {
       color: #fff;
       -webkit-font-smoothing: antialiased;
       text-align: center;
@@ -33,9 +33,8 @@
       max-width: 700px;
       font-family: 'Open Sans', sans-serif;
     }
-    .jumbotron h1 {
-      font-family: inherit;
-      font-size: 48px;
+    .wrapper {
+      background-color: #eee;
     }
     #adages {
       max-width: 700px;
@@ -52,15 +51,21 @@
       border-bottom: 4px solid #ca6;
     }
     .messages dl {
-      margin: 3em 0;
+      margin: 2em 0 3em;
+      background-color: rgba(255,255,255,0.8);
+      padding: 1em;
+      border-radius: 3px;
     }
     .messages dl dt {
-      letter-spacing: -1px;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5em;
     }
     .messages dl dd {
-      font-size: 24px;
+      letter-spacing: -0.04em;
+      font-size: 16px;
       color: #444;
       padding: 5px;
+      text-align: right;
     }
     .messages dl dd a {
       color: inherit;
@@ -72,22 +77,37 @@
     %h1 心に響く言葉
     %h2 Tread the beaten track.
 
-.container
-  #adages.row.center-block
-    .col-md-12.clearfix.messages
-      %dl
-        %dt 「好きなことをやって生きる」というのは、欲望のままに生きることではない。好きなことと社会との接点を探し続ける、長く苦しい道のりのことを言う。
-        %dd
-          %a{href: "https://twitter.com/Yam_eye/status/454982280461975552"} @Yam_eye
-    /
-      %dl
-        %dt 日本語文
-        %dd English sentence
+.wrapper
+  .container
+    #adages.row.center-block
+      .col-md-12.clearfix.messages
+        %dl
+          %dt 「好きなことをやって生きる」というのは、欲望のままに生きることではない。好きなことと社会との接点を探し続ける、長く苦しい道のりのことを言う。
+          %dd
+            %a{href: "https://twitter.com/Yam_eye/status/454982280461975552"} @Yam_eye
+        %dl
+          %dt ほこりのかぶったトロフィなどは何とも象徴的です。これは過去のあなたが「トロフィ」で、現在のあなたが「ほこり」ということなのです。
+          %dd 『人生カンタンリセット！夢をかなえる「そうじ力」 』　舛田光洋　サンマーク文庫
+        %dl
+          %dt 何かをするということは、それ以外のことをしないということである。
+          %dd 『検索は、するな。』　安田佳生　サンマーク出版
+        %dl
+          %dt 素晴らしい製品を生み出す工場は静かである
+          %dd
+            %a{href: "http://yshigeru.blogspot.com/2013/12/blog-post.html"} 読むために生まれ: 若いエンジニアへ
+        %dl
+          %dt 失敗は、未来に絶望したときと、過去の体験を無駄だったと判断したときに確定する
+          %dd
+            %a{href: "http://www.amazon.co.jp/%E3%83%A6%E3%83%80%E3%83%A4%E4%BA%BA%E5%A4%A7%E5%AF%8C%E8%B1%AA%E3%81%AE%E6%95%99%E3%81%88-%E6%9C%AC%E7%94%B0-%E5%81%A5/dp/4479790764/?_encoding=UTF8&camp=247&creative=1211&linkCode=ur2&tag=washuseesaane-22"} ユダヤ人大富豪の教え
+      /
+        %dl
+          %dt 文章
+          %dd 出典
 
 
   %hr
   %footer
-    %p
+    %p.text-center
       Respect for 
       %a{href: "https://www.google.co.jp/search?q=20%E4%B8%96%E7%B4%80%E3%83%9C%E3%83%A4%E3%83%BC%E3%82%B8&safe=off&qscrl=1&source=lnms&tbm=isch&sa=X"} THE 20TH CENTURY VOYAGE
     /%p © Company 2013
