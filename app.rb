@@ -28,6 +28,11 @@ get '/words/adage' do
   haml :"words/adage"
 end
 
+get '/words/images/:file.:ext' do |file, ext|
+  content_type ext
+  send_file "views/words/images/#{file}.#{ext}"
+end
+
 get '/users' do
   @allusers = User.all
   haml :users

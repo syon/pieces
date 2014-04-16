@@ -1,10 +1,37 @@
 - content_for :title do "心に響く言葉" end
 - content_for :webfont do
-  %link{href: "//fonts.googleapis.com/css?family=Great+Vibes:400", rel: "stylesheet", type: "text/css"}
+  %link{href: "//fonts.googleapis.com/css?family=Open+Sans:300", rel: "stylesheet", type: "text/css"}
 - content_for :pagecss do
   :css
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, YuMincho, 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+      background-color: #eee;
+    }
+    #header {
+      background: #303e54 url(./images/adage_header.jpg) no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      text-align: center;
+      padding: 4em 0;
+    }
+    #header h1 {
+      letter-spacing: .2em;
+      text-indent: .3em;
+      font-weight: 400;
+      font-size: 500%;
+      margin: .1em 0;
+    }
+    #header h2 {
+      letter-spacing: -0.00em;
+      font-weight: 300;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 1.5;
+      margin: 20px auto;
+      max-width: 700px;
+      font-family: 'Open Sans', sans-serif;
     }
     .jumbotron h1 {
       font-family: inherit;
@@ -40,11 +67,10 @@
     }
 
 
-/ Main jumbotron for a primary marketing message or call to action
-.jumbotron
-  .container.text-center
+%header#header
+  .container
     %h1 心に響く言葉
-    %p This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
+    %h2 Tread the beaten track.
 
 .container
   #adages.row.center-block
