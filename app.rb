@@ -4,7 +4,7 @@ require "sinatra/content_for"
 require 'active_record'
 
 ENV['RACK_ENV'] = "development" if ENV['RACK_ENV'].nil?
-ActiveRecord::Base.configurations = YAML.load_file('database.yml')
+ActiveRecord::Base.configurations = YAML.load_file('config/database.yml')
 ActiveRecord::Base.establish_connection(ENV['RACK_ENV'])
 use ActiveRecord::ConnectionAdapters::ConnectionManagement # for Connection Error
 
