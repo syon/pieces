@@ -8,6 +8,9 @@ gem "haml"
 gem 'sinatra-activerecord'
 gem 'activerecord'
 
+# PostgreSQL
+gem 'pg'
+
 group :development, :test do
   gem 'rake'
   gem 'rack-env'
@@ -16,6 +19,4 @@ group :development, :test do
 end
   
 group :production do
-  # PostgreSQL
-  gem 'pg'
 end
