@@ -1,5 +1,6 @@
 .bundle
 .env
+database.yml
 db/schema.rb
 db/*.sqlite3
 vendor/bundle
