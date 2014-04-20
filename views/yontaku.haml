@@ -1,11 +1,30 @@
 - content_for :title do "yontaku" end
+- content_for :metaext do
+  %meta{content: "width=device-width", name: "viewport"}/
 - content_for :pagecss do
   :css
+    body {
+      padding: 20px 0;
+    }
+    .container {
+      max-width: 730px;
+    }
+    .header h3 {
+      color: #999;
+      padding-bottom: 19px;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 40px;
+    }
+    .question {
+      margin: 1em 0;
+    }
     .toi {
       font-weight: bold;
       padding-right: .5em;
     }
     .radiolist {
+      margin: 2em 0;
       padding-left: 20px;
     }
     .kigo {
@@ -24,7 +43,8 @@
 
 .container
 
-  %h3= @ans
+  .header
+    %h3 yontaku
 
   %p.question
     %span.toi= "問#{@qid}"
