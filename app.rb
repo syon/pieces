@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'sinatra'
 require 'sinatra/reloader'
 require "sinatra/content_for"
@@ -49,4 +50,19 @@ post '/users' do
     user.save!
   end
   redirect '/users'
+end
+
+get '/yontaku/:qid' do |qid|
+  @qid = qid
+  @chosen_ans = nil
+  @correct_ans = nil
+  haml :yontaku
+end
+
+post '/yontaku/:qid' do |qid|
+  @qid = qid
+  @chosen_ans = params[:yontaku]
+  @correct_ans = "ans3"
+  @correct_kigo = "ウ"
+  haml :yontaku
 end
