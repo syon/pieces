@@ -8,3 +8,9 @@ http://syon-pieces.herokuapp.com/
 * [Words of Blessings](http://syon-pieces.herokuapp.com/words/bless)
 * [心に響く言葉](http://syon-pieces.herokuapp.com/words/adage)
 * [四択問題](http://syon-pieces.herokuapp.com/yontaku)
+
+## RUNNING
+
+```
+bundle exec foreman start
+```
