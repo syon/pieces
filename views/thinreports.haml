@@ -1,0 +1,10 @@
+- content_for :title do "thinreports" end
+.container
+  %h1
+    thinreports
+
+  %form.form-inline{action: "/thinreports", method: "post", role: "form"}
+    .form-group
+      %label.sr-only{for: "your_msg"} your_msg
+      %input#your_msg.form-control{name: "your_msg", placeholder: "Enter your_msg", type: "text"}
+    %button.btn.btn-default{type: "submit"} Download PDF

@@ -11,6 +11,9 @@ gem 'activerecord'
 # PostgreSQL
 gem 'pg'
 
+# ThinReports
+gem 'thinreports'
+
 group :development, :test do
   gem 'rake'
   gem 'rack-env'

@@ -3,6 +3,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require "sinatra/content_for"
 require 'active_record'
+require 'thinreports'
 
 ENV['RACK_ENV'] = "development" if ENV['RACK_ENV'].nil?
 puts "ENV['RACK_ENV']: #{ENV['RACK_ENV']}"
@@ -65,4 +66,19 @@ post '/yontaku/:qid' do |qid|
   @correct_ans = "ans3"
   @correct_kigo = "ウ"
   haml :yontaku
+end
+
+get '/thinreports' do
+  haml :thinreports
+end
+
+post '/thinreports' do
+  content_type 'application/pdf'
+  your_msg = params[:your_msg]
+  report = ThinReports::Report.new :layout => 'tlf/hello_world'
+  report.start_new_page
+  report.page.item(:world).value(your_msg)
+  report.page.item(:thinreports).value('ThinReports')
+  report.generate_file('hello_world.pdf')
+  send_file 'hello_world.pdf'
 end
