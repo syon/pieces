@@ -82,3 +82,7 @@ post '/thinreports' do
   report.generate_file('hello_world.pdf')
   send_file 'hello_world.pdf'
 end
+
+get '/midnight-celebration' do
+  haml :"midnight-celebration"
+end
