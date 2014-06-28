@@ -14,6 +14,9 @@ use ActiveRecord::ConnectionAdapters::ConnectionManagement # for Connection Erro
 class User < ActiveRecord::Base
 end
 
+class Ff7Status < ActiveRecord::Base
+end
+
 get '/' do
   @say = "Hello World."
   haml :index
@@ -51,6 +54,12 @@ post '/users' do
     user.save!
   end
   redirect '/users'
+end
+
+get '/ff7status' do
+  chara_id = params[:chara_id] ||= 1
+  @ff7status = Ff7Status.find(chara_id)
+  haml :ff7status
 end
 
 get '/yontaku/:qid' do |qid|

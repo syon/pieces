@@ -9,4 +9,24 @@ User.delete_all
   User.create(:registration_id => "seed data #{num}")
 end
 
+Ff7Status.delete_all
+(1..20).each do |num|
+  Ff7Status.create(
+    :chara_id => num,
+    :str => rand(256),
+    :dex => rand(256),
+    :vit => rand(256),
+    :mgc => rand(256),
+    :spi => rand(256),
+    :luc => rand(256),
+    :atk => rand(256),
+    :atk_p => rand(256),
+    :def => rand(256),
+    :def_p => rand(256),
+    :mgc_atk => rand(256),
+    :mgc_def => rand(256),
+    :mgc_def_p => rand(256)
+  )
+end
+
 puts "===== db/seeds.rb  END  ====="
