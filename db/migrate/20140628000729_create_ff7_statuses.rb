@@ -1,7 +1,7 @@
 class CreateFf7Statuses < ActiveRecord::Migration
   def up
     create_table :ff7_statuses do |t|
-      t.integer :chara_id
+      t.integer :ff7_character_id
       t.integer :str
       t.integer :dex
       t.integer :vit

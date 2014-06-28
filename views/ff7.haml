@@ -1,0 +1,24 @@
+- content_for :title do "FF7" end
+.container
+  %ul
+    %li= "id: #{@ff7.id}"
+    %li= "name: #{@ff7.name}"
+    %li= "lv: #{@ff7.lv}"
+    %li= "hp: #{@ff7.hp}"
+    %li= "mp: #{@ff7.mp}"
+  %ul
+    %li= "id: #{@ff7.ff7_status.id}"
+    %li= "chara_id: #{@ff7.ff7_status.ff7_character_id}"
+    %li= "str: #{@ff7.ff7_status.str}"
+    %li= "dex: #{@ff7.ff7_status.dex}"
+    %li= "vit: #{@ff7.ff7_status.vit}"
+    %li= "mgc: #{@ff7.ff7_status.mgc}"
+    %li= "spi: #{@ff7.ff7_status.spi}"
+    %li= "luc: #{@ff7.ff7_status.luc}"
+    %li= "atk: #{@ff7.ff7_status.atk}"
+    %li= "atk_p: #{@ff7.ff7_status.atk_p}"
+    %li= "def: #{@ff7.ff7_status.def}"
+    %li= "def_p: #{@ff7.ff7_status.def_p}"
+    %li= "mgc_atk: #{@ff7.ff7_status.mgc_atk}"
+    %li= "mgc_def: #{@ff7.ff7_status.mgc_def}"
+    %li= "mgc_def_p: #{@ff7.ff7_status.mgc_def_p}"

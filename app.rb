@@ -40,10 +40,10 @@ post '/users' do
   redirect '/users'
 end
 
-get '/ff7status' do
+get '/ff7' do
   chara_id = params[:chara_id] ||= 1
-  @ff7status = Ff7Status.find(chara_id)
-  haml :ff7status
+  @ff7 = Ff7Character.find(chara_id)
+  haml :ff7
 end
 
 get '/yontaku/:qid' do |qid|
