@@ -1,0 +1,43 @@
+---
+layout: chartjs.jade
+---
+
+h2 Scatter Line Charts
+
+p http://www.chartjs.org/docs/#line-chart-scatter-line-charts
+
+p スキャターチャート・散布図に対し、これは散在する点をなめらかに繋げるチャート。
+
+div.
+  <div class="canvas-holder">
+    <canvas id="myChart" width="250" height="125"></canvas>
+  </div>
+  <script>
+  var ctx = document.getElementById("myChart");
+  var scatterChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            label: 'Scatter Dataset',
+            data: [{
+                x: -10,
+                y: 0
+            }, {
+                x: 0,
+                y: 10
+            }, {
+                x: 10,
+                y: 5
+            }]
+        }]
+    },
+    options: {
+        scales: {
+            xAxes: [{
+                type: 'linear',
+                position: 'bottom'
+            }]
+        }
+    }
+  });
+  </script>
