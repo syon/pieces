@@ -1,0 +1,49 @@
+---
+layout: chartjs.jade
+---
+
+h2 Polar Area Chart
+
+p 「鶏頭図（polar area diagram）」
+blockquote
+  | 鶏頭図は円グラフと似ているが、各領域の中心角は一定であり、量は中心からの半径で表される。
+  a(href="https://ja.wikipedia.org/wiki/%E5%86%86%E3%82%B0%E3%83%A9%E3%83%95") 円グラフ - Wikipedia
+
+div.
+  <div class="canvas-holder">
+    <canvas id="myChart" width="250" height="150"></canvas>
+  </div>
+  <script>
+  var ctx = document.getElementById("myChart");
+  var data = {
+    datasets: [{
+        data: [
+            11,
+            16,
+            7,
+            3,
+            14
+        ],
+        backgroundColor: [
+            "#FF6384",
+            "#4BC0C0",
+            "#FFCE56",
+            "#E7E9ED",
+            "#36A2EB"
+        ],
+        label: 'My dataset' // for legend
+    }],
+    labels: [
+        "Red",
+        "Green",
+        "Yellow",
+        "Grey",
+        "Blue"
+    ]
+  };
+  var myChart = new Chart(ctx, {
+      type: 'polarArea',
+      data: data,
+      options: {}
+  });
+  </script>
