@@ -7,4 +7,9 @@ block libs
 
 block main
   .container
-    div!= contents
+    .three.columns
+      ul
+        li
+          a(href="./bar-chart.html") Bar Chart
+    .nine.columns
+      div!= contents
