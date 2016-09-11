@@ -6,23 +6,24 @@ block libs
   script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.min.js")
 
 block main
+  - var base = "/piecies/chartjs/samples"
   .container
     .three.columns
-      h5 index
+      h5 index #{1+1}
       ul
         li
-          a(href="./line-chart.html") Line Chart
+          a(href="#{base}/doc-line-chart.html") Line Chart
         li
-          a(href="./scatter-line-charts.html") Scatter Line Charts
+          a(href="#{base}/doc-scatter-line-charts.html") Scatter Line Charts
         li
-          a(href="./bar-chart.html") Bar Chart
+          a(href="#{base}/doc-bar-chart.html") Bar Chart
         li
-          a(href="./radar-chart.html") Radar Chart
+          a(href="#{base}/doc-radar-chart.html") Radar Chart
         li
-          a(href="./polar-area-chart.html") Polar Area Chart
+          a(href="#{base}/doc-polar-area-chart.html") Polar Area Chart
         li
-          a(href="./pie-doughnut-charts.html") Pie & Doughnut Charts
+          a(href="#{base}/doc-pie-doughnut-charts.html") Pie & Doughnut Charts
         li
-          a(href="./bubble-chart.html") Bubble Chart
+          a(href="#{base}/doc-bubble-chart.html") Bubble Chart
     .nine.columns
       div!= contents
