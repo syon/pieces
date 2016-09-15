@@ -28,10 +28,10 @@ function watching() {
 }
 
 Metalsmith(__dirname)
-  .destination('piecies')
+  .destination('pieces')
   .metadata({
     site: {
-      name: 'syon/piecies'
+      name: 'syon/pieces'
     }
   })
   .use(assets({
@@ -48,7 +48,7 @@ Metalsmith(__dirname)
   .use(jade())
   .use(layouts({engine:"jade"}))
   .use(mapsite({
-    hostname: 'https://syon.github.io/piecies/'
+    hostname: 'https://syon.github.io/pieces/'
   }))
   .use(watching())
   .build(function(err){

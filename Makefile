@@ -4,7 +4,7 @@ build: node_modules
 node_modules: package.json
 	npm install
 
-serve: piecies
+serve: pieces
 	node serve
 
 .PHONY: build

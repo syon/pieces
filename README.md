@@ -1,5 +1,5 @@
-piecies
-=======
+pieces
+======
 
 ## dev
 
