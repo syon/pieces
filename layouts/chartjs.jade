@@ -1,0 +1,100 @@
+extends layout
+
+block libs
+  link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway")
+  link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.2/Chart.bundle.min.js")
+
+block main
+  - var base = "/pieces/chartjs/samples"
+  .container
+    .three.columns
+      h5 index
+      ul
+        li
+          a(href="#{base}/doc/line-chart.html") Line Chart
+        li
+          a(href="#{base}/doc/scatter-line-charts.html") Scatter Line Charts
+        li
+          a(href="#{base}/doc/bar-chart.html") Bar Chart
+        li
+          a(href="#{base}/doc/radar-chart.html") Radar Chart
+        li
+          a(href="#{base}/doc/polar-area-chart.html") Polar Area Chart
+        li
+          a(href="#{base}/doc/pie-doughnut-charts.html") Pie & Doughnut Charts
+        li
+          a(href="#{base}/doc/bubble-chart.html") Bubble Chart
+      h5 complex samples
+      ul
+        li
+          a(href="#{base}/complex/bar-horizontal.html") bar-horizontal
+        li
+          a(href="#{base}/complex/bar-multi-axis.html") bar-multi-axis
+        li
+          a(href="#{base}/complex/bar-stacked.html") bar-stacked
+        li
+          a(href="#{base}/complex/bar.html") bar
+        li
+          a(href="#{base}/complex/bubble.html") bubble
+        li
+          a(href="#{base}/complex/combo-bar-line.html") combo-bar-line
+        li
+          a(href="#{base}/complex/data_label_combo-bar-line.html") data_label_combo-bar-line
+        li
+          a(href="#{base}/complex/different-point-sizes.html") different-point-sizes
+        li
+          a(href="#{base}/complex/doughnut.html") doughnut
+        li
+          a(href="#{base}/complex/line-cubicInterpolationMode.html") line-cubicInterpolationMode
+        li
+          a(href="#{base}/complex/line-customTooltips.html") line-customTooltips
+        li
+          a(href="#{base}/complex/line-legend.html") line-legend
+        li
+          a(href="#{base}/complex/line-logarithmic.html") line-logarithmic
+        li
+          a(href="#{base}/complex/line-multi-axis.html") line-multi-axis
+        li
+          a(href="#{base}/complex/line-multiline-labels.html") line-multiline-labels
+        li
+          a(href="#{base}/complex/line-non-numeric-y.html") line-non-numeric-y
+        li
+          a(href="#{base}/complex/line-skip-points.html") line-skip-points
+        li
+          a(href="#{base}/complex/line-stacked-area.html") line-stacked-area
+        li
+          a(href="#{base}/complex/line-stepped.html") line-stepped
+        li
+          a(href="#{base}/complex/line-x-axis-filter.html") line-x-axis-filter
+        li
+          a(href="#{base}/complex/line.html") line
+        li
+          a(href="#{base}/complex/pie-customTooltips.html") pie-customTooltips
+        li
+          a(href="#{base}/complex/pie.html") pie
+        li
+          a(href="#{base}/complex/polar-area.html") polar-area
+        li
+          a(href="#{base}/complex/radar-skip-points.html") radar-skip-points
+        li
+          a(href="#{base}/complex/radar.html") radar
+        li
+          a(href="#{base}/complex/scatter-logX.html") scatter-logX
+        li
+          a(href="#{base}/complex/scatter-multi-axis.html") scatter-multi-axis
+        li
+          a(href="#{base}/complex/scatter.html") scatter
+        li
+          a(href="#{base}/complex/tooltip-hooks.html") tooltip-hooks
+        li
+          a(href="#{base}/complex/AnimationCallbacks/progress-bar.html") AnimationCallbacks/progress-bar
+        li
+          a(href="#{base}/complex/timeScale/combo-time-scale.html") timeScale/combo-time-scale
+        li
+          a(href="#{base}/complex/timeScale/line-time-point-data.html") timeScale/line-time-point-data
+        li
+          a(href="#{base}/complex/timeScale/line-time-scale.html") timeScale/line-time-scale
+    .nine.columns
+      div!= contents
