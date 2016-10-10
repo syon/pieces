@@ -2,6 +2,7 @@
   "name": "pieces",
   "private": true,
   "dependencies": {
+    "jstransformer-markdown-it": "^1.0.0",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-jade": "^2.0.2",
@@ -10,6 +11,7 @@
     "metalsmith-mapsite": "^1.0.3",
     "metalsmith-markdown-remarkable": "^0.1.1",
     "metalsmith-prism": "^3.0.1",
+    "metalsmith-pug": "^1.1.0",
     "metalsmith-watch": "^1.0.2"
   },
   "devDependencies": {
