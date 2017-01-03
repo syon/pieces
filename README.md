@@ -3,11 +3,6 @@ pieces
 
 ## dev
 
-#### install
-```sh
-$ npm i -g node-static
-```
-
 #### build
 ```sh
 $ make
@@ -15,5 +10,5 @@ $ make
 
 #### serve
 ```sh
-$ static -p 8080
+$ npm start
 ```
