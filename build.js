@@ -7,15 +7,9 @@ var jade       = require('metalsmith-pug');
 var layouts    = require('metalsmith-layouts');
 var mapsite    = require('metalsmith-mapsite');
 var watch      = require('metalsmith-watch');
-var dotenv     = require('dotenv').config();
-
-var NODE_ENV = process.env.NODE_ENV;
-if (dotenv.NODE_ENV) {
-  NODE_ENV = dotenv.NODE_ENV;
-}
 
 function watching() {
-  if (NODE_ENV == 'development') {
+  if (process.env.NODE_ENV === 'development') {
     return watch({
       paths: {
         "${source}/**/*": "**/*",

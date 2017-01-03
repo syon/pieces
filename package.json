@@ -2,7 +2,8 @@
   "name": "pieces",
   "private": true,
   "scripts": {
-    "start": "nf start"
+    "start": "nf start",
+    "build": "node build"
   },
   "dependencies": {
     "jstransformer-markdown-it": "^1.0.0",
@@ -18,7 +19,6 @@
     "metalsmith-watch": "^1.0.2"
   },
   "devDependencies": {
-    "dotenv": "^2.0.0",
     "foreman": "^2.0.0",
     "serve": "^2.1.2"
   }
