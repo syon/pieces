@@ -5,15 +5,16 @@
 
 #src, #dest {
   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 #src {
-  min-height: 100px;
+  height: 150px;
 }
 
 #dest {
-  min-height: 100px;
+  height: 300px;
   padding: 5px;
   background-color: #f5f5f5;
+  overflow-x: scroll;
 }
