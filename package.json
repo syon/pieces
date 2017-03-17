@@ -6,7 +6,9 @@
     "build": "node build"
   },
   "dependencies": {
+    "jstransformer-babel": "^2.1.0",
     "jstransformer-markdown-it": "^1.0.0",
+    "jstransformer-scss": "^0.1.4",
     "metalsmith": "^2.1.0",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-jade": "^2.0.2",
