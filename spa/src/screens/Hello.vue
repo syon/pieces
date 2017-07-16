@@ -1,7 +1,7 @@
 <template lang="pug">
 .screen
   .container
-    h1 {{ msg }}
+    h1 Pieces
     ul
       li
         router-link(to="/formatter/html/") HTML Formatter
@@ -27,11 +27,6 @@ export default {
   name: 'hello',
   components: {
     GlobalFooter,
-  },
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
   },
 };
 </script>
