@@ -1,0 +1,19 @@
+box: nodesource/trusty
+
+build:
+  steps:
+    - script:
+        name: cd spa
+        code: |
+          cd spa
+
+    - npm-install
+
+    - script:
+        name: build spa
+        code: |
+          npm run build
+
+    - lukevivier/gh-pages:
+        token: $GH_TOKEN
+        basedir: spa/dist
