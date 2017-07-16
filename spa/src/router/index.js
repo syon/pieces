@@ -6,6 +6,7 @@ import FormatterHtml from '@/screens/formatter/Html';
 import FormatterCss from '@/screens/formatter/Css';
 import FormatterSql from '@/screens/formatter/Sql';
 import WordsAdage from '@/screens/words/Adage';
+import WordsBless from '@/screens/words/Bless';
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/words/adage/',
       name: 'WordsAdage',
       component: WordsAdage,
+    },
+    {
+      path: '/words/bless/',
+      name: 'WordsBless',
+      component: WordsBless,
     },
   ],
 });

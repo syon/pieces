@@ -12,6 +12,8 @@
     ul
       li
         router-link(to="/words/adage/") 心に響く言葉
+      li
+        router-link(to="/words/bless/") Words of Blessings
   global-footer
 </template>
 
@@ -31,7 +33,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
 h1, h2
   font-weight normal
