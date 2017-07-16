@@ -2,11 +2,10 @@ box: nodesource/trusty
 
 build:
   steps:
-    - npm-install
     - script:
         name: SPA
         code: |
-          ls node_modules/
+          npm install
           npm run build
 
 deploy:
