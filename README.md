@@ -1,4 +1,5 @@
-# pieces-spa
+pieces
+======
 
 > A Vue.js project
 
