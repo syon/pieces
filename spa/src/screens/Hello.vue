@@ -5,6 +5,13 @@
     ul
       li
         router-link(to="/formatter/html/") HTML Formatter
+      li
+        router-link(to="/formatter/css/") CSS Formatter
+      li
+        router-link(to="/formatter/sql/") SQL Formatter
+    ul
+      li
+        router-link(to="/words/adage/") 心に響く言葉
   global-footer
 </template>
 

@@ -5,6 +5,7 @@ import FormatterIndex from '@/screens/formatter/Index';
 import FormatterHtml from '@/screens/formatter/Html';
 import FormatterCss from '@/screens/formatter/Css';
 import FormatterSql from '@/screens/formatter/Sql';
+import WordsAdage from '@/screens/words/Adage';
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/formatter/sql/',
       name: 'FormatterSql',
       component: FormatterSql,
+    },
+    {
+      path: '/words/adage/',
+      name: 'WordsAdage',
+      component: WordsAdage,
     },
   ],
 });
