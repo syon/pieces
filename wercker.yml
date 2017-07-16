@@ -2,11 +2,11 @@ box: nodesource/trusty
 
 build:
   steps:
+    - npm install
+
     - script:
         name: SPA
         code: |
-          cd spa
-          npm install
           npm run build
 
     - lukevivier/gh-pages:
