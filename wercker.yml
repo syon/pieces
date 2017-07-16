@@ -6,6 +6,7 @@ build:
     - script:
         name: SPA
         code: |
+          ls node_modules/
           npm run build
 
 deploy:
