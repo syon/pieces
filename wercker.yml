@@ -5,6 +5,8 @@ build:
     - script:
         name: cd spa
         code: |
+          pwd
+          ls -l
           cd spa
 
     - npm-install
