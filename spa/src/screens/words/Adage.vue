@@ -164,8 +164,8 @@ export default {
 };
 </script>
 
-<style>
-body {
+<style scoped>
+.page {
   font-family: 'Helvetica Neue', Helvetica, Arial, YuMincho, serif;
   background-color: #eee;
   background: #303e54 url(../../assets/StarryLake.jpg) no-repeat center top;
