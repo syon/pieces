@@ -1,5 +1,5 @@
 <template lang="pug">
-.hello
+.screen
   h1 {{ msg }}
   h2 Essential Links
   ul
@@ -24,11 +24,17 @@
       a(href="http://vue-loader.vuejs.org/" target="_blank") vue-loader
     li
       a(href="https://github.com/vuejs/awesome-vue" target="_blank") awesome-vue
+  global-footer
 </template>
 
 <script>
+import GlobalFooter from '@/components/GlobalFooter';
+
 export default {
   name: 'hello',
+  components: {
+    GlobalFooter,
+  },
   data() {
     return {
       msg: 'Welcome to Your Vue.js App',
