@@ -7,6 +7,7 @@ import FormatterCss from '@/screens/formatter/Css';
 import FormatterSql from '@/screens/formatter/Sql';
 import WordsAdage from '@/screens/words/Adage';
 import WordsBless from '@/screens/words/Bless';
+import Vsix from '@/screens/misc/Vsix';
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/words/bless/',
       name: 'WordsBless',
       component: WordsBless,
+    },
+    {
+      path: '/misc/vscode-vsix/',
+      name: 'Vsix',
+      component: Vsix,
     },
   ],
 });

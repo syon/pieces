@@ -14,6 +14,9 @@
         router-link(to="/words/adage/") 心に響く言葉
       li
         router-link(to="/words/bless/") Words of Blessings
+    ul
+      li
+        router-link(to="/misc/vscode-vsix/") VSCode - VSIX Downloader
   global-footer
 </template>
 
