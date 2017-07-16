@@ -2,7 +2,7 @@ box: nodesource/trusty
 
 build:
   steps:
-    - npm install
+    - npm-install
 
     - script:
         name: SPA
@@ -11,4 +11,4 @@ build:
 
     - lukevivier/gh-pages:
         token: $GH_TOKEN
-        basedir: spa/dist
+        basedir: dist
