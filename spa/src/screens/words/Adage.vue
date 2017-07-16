@@ -157,7 +157,7 @@
 import GlobalFooter from '@/components/GlobalFooter';
 
 export default {
-  name: 'css',
+  name: 'adage',
   components: {
     GlobalFooter,
   },
