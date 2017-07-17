@@ -1,7 +1,7 @@
 <template lang="pug">
 .screen
   .container
-    h2 pixel-color
+    h2 Pixel Color Picker
 
     div(style="display:flex; align-items:flex-start;")
       canvas#myCanvas(style="cursor: crosshair;")

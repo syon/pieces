@@ -6,6 +6,13 @@ import router from './router';
 
 Vue.config.productionTip = false;
 
+router.beforeEach((to, from, next) => {
+  const t = to.meta.title;
+  const s = 'syon/pieces';
+  document.title = t ? `${t} :: ${s}` : `${s}`;
+  next();
+});
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
