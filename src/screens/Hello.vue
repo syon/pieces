@@ -11,6 +11,9 @@
         router-link(to="/formatter/sql/") SQL Formatter
     ul
       li
+        router-link(to="/tips/checkbox/") Checkbox
+    ul
+      li
         router-link(to="/words/adage/") 心に響く言葉
       li
         router-link(to="/words/bless/") Words of Blessings

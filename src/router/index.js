@@ -5,6 +5,7 @@ import FormatterIndex from '@/screens/formatter/Index';
 import FormatterHtml from '@/screens/formatter/Html';
 import FormatterCss from '@/screens/formatter/Css';
 import FormatterSql from '@/screens/formatter/Sql';
+import Checkbox from '@/screens/tips/Checkbox';
 import WordsAdage from '@/screens/words/Adage';
 import WordsBless from '@/screens/words/Bless';
 import PixelColor from '@/screens/misc/PixelColor';
@@ -38,6 +39,11 @@ export default new Router({
       path: '/formatter/sql/',
       name: 'FormatterSql',
       component: FormatterSql,
+    },
+    {
+      path: '/tips/checkbox/',
+      name: 'Checkbox',
+      component: Checkbox,
     },
     {
       path: '/words/adage/',
