@@ -4,6 +4,9 @@
     h1 Pieces
     ul
       li
+        router-link(to="/chartjs/") Chart.js
+    ul
+      li
         router-link(to="/formatter/html/") HTML Formatter
       li
         router-link(to="/formatter/css/") CSS Formatter

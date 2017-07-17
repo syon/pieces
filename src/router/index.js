@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Hello from '@/screens/Hello';
+import Chartjs from '@/screens/chartjs/Chartjs';
 import FormatterIndex from '@/screens/formatter/Index';
 import FormatterHtml from '@/screens/formatter/Html';
 import FormatterCss from '@/screens/formatter/Css';
@@ -20,6 +21,11 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello,
+    },
+    {
+      path: '/chartjs/',
+      name: 'Chartjs',
+      component: Chartjs,
     },
     {
       path: '/formatter/',
