@@ -8,6 +8,7 @@ import FormatterSql from '@/screens/formatter/Sql';
 import Checkbox from '@/screens/tips/Checkbox';
 import WordsAdage from '@/screens/words/Adage';
 import WordsBless from '@/screens/words/Bless';
+import UrlEncode from '@/screens/converter/UrlEncode';
 import PixelColor from '@/screens/misc/PixelColor';
 import Vsix from '@/screens/misc/Vsix';
 
@@ -54,6 +55,11 @@ export default new Router({
       path: '/words/bless/',
       name: 'WordsBless',
       component: WordsBless,
+    },
+    {
+      path: '/converter/url-encode/',
+      name: 'UrlEncode',
+      component: UrlEncode,
     },
     {
       path: '/misc/pixel-color/',
