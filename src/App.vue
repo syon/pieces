@@ -1,0 +1,15 @@
+<template lang="pug">
+#app
+  router-view
+</template>
+
+<script>
+export default {
+  name: 'app',
+};
+</script>
+
+<style lang="stylus">
+body
+  margin 0
+</style>
