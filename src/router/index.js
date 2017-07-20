@@ -12,10 +12,11 @@ import WordsBless from '@/screens/words/Bless';
 import UrlEncode from '@/screens/converter/UrlEncode';
 import PixelColor from '@/screens/misc/PixelColor';
 import Vsix from '@/screens/misc/Vsix';
+import NotFound from '@/screens/NotFound';
 
 Vue.use(Router);
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -89,5 +90,24 @@ export default new Router({
       component: Vsix,
       meta: { title: 'VSCode - VSIX Downloader' },
     },
+    {
+      path: '/404',
+      name: 'NotFound',
+      component: NotFound,
+      meta: { title: '404' },
+    },
+    {
+      path: '*',
+      redirect: { name: 'NotFound' },
+    },
   ],
 });
+
+router.beforeEach((to, from, next) => {
+  const t = to.meta.title;
+  const s = 'syon/pieces';
+  document.title = t ? `${t} :: ${s}` : `${s}`;
+  next();
+});
+
+export default router;
