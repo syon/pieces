@@ -72,10 +72,10 @@ export default new Router({
       meta: { title: 'Words of Blessings' },
     },
     {
-      path: '/converter/url-encode/',
+      path: '/url-encode-decode/',
       name: 'UrlEncode',
       component: UrlEncode,
-      meta: { title: 'URLエンコード' },
+      meta: { title: 'URLエンコード・デコード' },
     },
     {
       path: '/misc/pixel-color/',

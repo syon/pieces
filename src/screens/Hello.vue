@@ -22,7 +22,7 @@
         router-link(to="/words/bless/") Words of Blessings
     ul
       li
-        router-link(to="/converter/url-encode/") URLエンコード
+        router-link(to="/url-encode-decode/") URLエンコード
       li
         router-link(to="/misc/pixel-color/") PixelColor
       li
