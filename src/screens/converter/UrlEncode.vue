@@ -1,20 +1,35 @@
 <template lang="pug">
 .screen
-  .container(uk-grid)
-    h2 URLエンコード
+  .container
+    h2 URLエンコード・デコード
 
+  .container(uk-grid)
     .uk-width-3-4
       .uk-card
         form.uk-form-stacked
-          .uk-form-label INPUT
+          .uk-form-label Input
           .uk-form-controls
             textarea#src.uk-textarea.block(v-model="enc_src" placeholder="変換したいテキストを入力してください（改行で複数指定できます）")
 
         .results.uk-margin
-          .uk-form-label ENCODED
+          .uk-form-label Encoded
           .uk-card.uk-card-default.uk-card-body
             pre.line-dest
-              .line(v-for="line in encSrcList")
+              .line(v-for="line in encodedList")
+                code {{ line.dest }}
+
+        .results.uk-margin
+          .uk-form-label Decoded
+          .uk-card.uk-card-default.uk-card-body
+            pre.line-dest
+              .line(v-for="line in decodedList")
+                code {{ line.dest }}
+
+        .results.uk-margin
+          .uk-form-label Parsed Querystring
+          .uk-card.uk-card-default.uk-card-body
+            pre.line-dest
+              .line(v-for="line in parsedList")
                 code {{ line.dest }}
 
     .uk-width-1-4
@@ -25,6 +40,14 @@
           .uk-form-controls
             select.uk-select(v-model="enc_charset")
               option(value="utf8") UTF-8
+      .options-header Links
+      ul
+        li
+          a(href="https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%BC%E3%82%BB%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%82%B3%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0")
+            | Wikipedia
+        li
+          a(href="https://github.com/node-modules/urlencode")
+            | NPM Module
 </template>
 
 <script>
@@ -44,11 +67,34 @@ export default {
     };
   },
   computed: {
-    encSrcList() {
+    encodedList() {
       const list = this.enc_src.split('\n');
       return list.filter(d => d !== '').map((d) => {
-        const cs = this.enc_charset;
-        return { src: d, dest: urlencode(d, cs) };
+        try {
+          return { dest: urlencode(d, this.enc_charset) };
+        } catch (e) {
+          return { dest: 'error' };
+        }
+      });
+    },
+    decodedList() {
+      const list = this.enc_src.split('\n');
+      return list.filter(d => d !== '').map((d) => {
+        try {
+          return { dest: urlencode.decode(d, this.enc_charset) };
+        } catch (e) {
+          return { dest: 'error' };
+        }
+      });
+    },
+    parsedList() {
+      const list = this.enc_src.split('\n');
+      return list.filter(d => d !== '').map((d) => {
+        try {
+          return { dest: urlencode.parse(d, this.enc_charset) };
+        } catch (e) {
+          return { dest: 'error' };
+        }
       });
     },
   },
@@ -90,7 +136,7 @@ button, input, select
     padding 0
     border 0
   .line
-    // margin 0 0 3em
+    padding 0.5em 0
     border-bottom 1px solid #ebf0f4
     .head
       margin .4em .2em
@@ -103,6 +149,7 @@ button, input, select
     .line-dest
       margin 0 0 .5em
     code
+      padding 0
       background-color transparent
       border 0
       white-space normal
