@@ -4,7 +4,7 @@
     nav.uk-navbar
       div.uk-navbar-left
         ul.uk-navbar-nav
-          a(href="") Pieces
+          a.logo(href="") Pieces
 </template>
 
 <script>
@@ -20,6 +20,7 @@ export default {
   .uk-navbar
     min-height 40px
   
-  a
+  .logo
+    padding 0 15px
     color #fff
 </style>
