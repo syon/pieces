@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Hello from '@/screens/Hello';
 import Chartjs from '@/screens/chartjs/Chartjs';
-import FormatterIndex from '@/screens/formatter/Index';
 import FormatterHtml from '@/screens/formatter/Html';
 import FormatterCss from '@/screens/formatter/Css';
 import FormatterSql from '@/screens/formatter/Sql';
@@ -29,12 +28,6 @@ const router = new Router({
       name: 'Chartjs',
       component: Chartjs,
       meta: { title: 'Chart.js' },
-    },
-    {
-      path: '/formatter/',
-      name: 'FormatterIndex',
-      component: FormatterIndex,
-      meta: { title: 'Formatter' },
     },
     {
       path: '/formatter/html/',

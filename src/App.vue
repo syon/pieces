@@ -1,15 +1,27 @@
 <template lang="pug">
 #app
-  router-view
+  appbar
+  sidebar
+  .tm-main.uk-section
+    .uk-container
+      router-view
 </template>
 
 <script>
+import Appbar from '@/components/Appbar';
+import Sidebar from '@/components/Sidebar';
+
 export default {
   name: 'app',
+  components: {
+    Appbar,
+    Sidebar,
+  },
 };
 </script>
 
 <style lang="stylus">
-body
-  margin 0
+.tm-main
+  margin-left 240px
+  padding-top 40px
 </style>

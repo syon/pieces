@@ -1,24 +1,2 @@
-#app
-  .tm-appbar
-    background linear-gradient(to left, #28a5f5, #1e87f0)
-    
-    .uk-navbar
-      min-height 40px
-    
-    a
-      color #fff
-
-  .tm-sidebar-left
-    position fixed
-    top 40px
-    bottom 0
-    display flex
-    flex-direction column
-    border-right 1px #e5e5e5 solid
-
-    .tm-menu
-      flex 1
-      box-sizing border-box
-      width 240px !important
-      padding 40px 40px 0 40px
-      overflow auto
+*
+  box-sizing border-box
