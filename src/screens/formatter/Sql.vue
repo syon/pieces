@@ -39,7 +39,7 @@
           option(value="capitalize") 先頭のみ大文字
 
       .nine.columns
-        textarea#src.block(v-model="src")
+        textarea#src.uk-textarea.block(v-model="src")
 
         .centering
           button#format.button-primary(@click="execute" v-bind:disabled="loading") Format

@@ -3,7 +3,7 @@
   .container
     h2 HTML Formatter
 
-    textarea#src.block(v-model="src")
+    textarea#src.uk-textarea.block(v-model="src")
 
     .centering
       button#format.button-primary(@click="doFormat") Format
