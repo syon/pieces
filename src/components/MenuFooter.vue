@@ -32,6 +32,7 @@ footer
     padding 8px 16px
     height 50px
     font-size 12px
+    font-family sans-serif
     color #7e888b
     .author
       display flex
