@@ -18,8 +18,6 @@
         span.head ENCODED
         pre.line-dest
           code {{ line.dest }}
-
-  global-footer
 </template>
 
 <script>

@@ -45,8 +45,6 @@
           button#format.button-primary(@click="execute" v-bind:disabled="loading") Format
 
         pre#dest {{ dest }}
-
-  global-footer
 </template>
 
 <script>

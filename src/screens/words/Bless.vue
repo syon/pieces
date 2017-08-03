@@ -21,7 +21,6 @@
         dl
           dt お二人の永遠の愛と絆をお祈りします
           dd Wishing you both everlasting Love & Togetherness
-  global-footer
 </template>
 
 <script>

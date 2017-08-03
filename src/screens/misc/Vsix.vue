@@ -40,8 +40,6 @@
     ul
       li
         a(href="http://code.visualstudio.com/docs/editor/extension-gallery#_common-questions") Managing Extensions in Visual Studio Code
-
-  global-footer
 </template>
 
 <script>

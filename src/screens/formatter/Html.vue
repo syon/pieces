@@ -9,8 +9,6 @@
       button#format.button-primary(@click="doFormat") Format
 
     pre#dest {{ dest }}
-
-  global-footer
 </template>
 
 <script>

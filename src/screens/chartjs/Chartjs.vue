@@ -11,8 +11,6 @@
       <div class="canvas-holder">
         <canvas id="myChart" width="250" height="125"></canvas>
       </div>
-
-  global-footer
 </template>
 
 <script>

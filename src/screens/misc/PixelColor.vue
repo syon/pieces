@@ -11,8 +11,6 @@
     ul
       li
         a(href="https://msdn.microsoft.com/ja-jp/library/jj203843(v=vs.85).aspx") Canvas を使って画像の色をサンプリングする (Windows)
-
-  global-footer
 </template>
 
 <script>
