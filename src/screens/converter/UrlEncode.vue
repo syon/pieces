@@ -40,6 +40,9 @@
           .uk-form-controls
             select.uk-select(v-model="enc_charset")
               option(value="utf8") UTF-8
+              option(value="shiftjis") Shift_JIS
+              option(value="EUC-JP") EUC-JP
+              option(value="gbk") GBK
       .options-header Links
       ul
         li
