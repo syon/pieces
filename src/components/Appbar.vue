@@ -1,5 +1,5 @@
 <template lang="pug">
-.tm-appbar.uk-navbar-container
+.tm-appbar.uk-navbar-container(uk-sticky)
   .uk-container
     nav.uk-navbar
       div.uk-navbar-left
