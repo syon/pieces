@@ -11,7 +11,7 @@
       li
         router-link(to="/formatter/sql/") SQL Formatter
       li
-        router-link(to="/url-encode-decode/") URLエンコード
+        router-link(to="/url-encode-decode/") URLエンコード・デコード
 
       li.uk-nav-header Code
       li
