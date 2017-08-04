@@ -43,13 +43,8 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
-
 export default {
   name: 'vsix',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       extn: 'vscode-icons',

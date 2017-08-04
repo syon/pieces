@@ -12,14 +12,10 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import jsBeautify from 'js-beautify';
 
 export default {
   name: 'css',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       src: 'body{color:red;}',

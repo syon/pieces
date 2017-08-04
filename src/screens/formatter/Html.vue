@@ -12,14 +12,10 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import jsBeautify from 'js-beautify';
 
 export default {
   name: 'html',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       src: '<section><h1>Hello</h1></section>',

@@ -14,14 +14,10 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import Chart from 'chart.js';
 
 export default {
   name: 'chartjs',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       enc_src: '',

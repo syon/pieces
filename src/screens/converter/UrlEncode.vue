@@ -57,14 +57,10 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import urlencode from 'urlencode';
 
 export default {
   name: 'url-encode',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       enc_src: '',

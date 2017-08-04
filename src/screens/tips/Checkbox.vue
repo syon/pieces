@@ -13,13 +13,8 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
-
 export default {
   name: 'checkbox',
-  components: {
-    GlobalFooter,
-  },
 };
 </script>
 

@@ -14,14 +14,10 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import ImagePath from './pixel-color.jpg';
 
 export default {
   name: 'pixel-color',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       extn: 'vscode-icons',

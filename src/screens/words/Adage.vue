@@ -154,13 +154,8 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
-
 export default {
   name: 'adage',
-  components: {
-    GlobalFooter,
-  },
 };
 </script>
 

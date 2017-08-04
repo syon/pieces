@@ -48,14 +48,10 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import queryString from 'query-string';
 
 export default {
   name: 'sql',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       reindent: true,

@@ -10,13 +10,8 @@
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
-
 export default {
   name: 'not-found',
-  components: {
-    GlobalFooter,
-  },
   computed: {
     params() {
       return this.$route.params[0];
