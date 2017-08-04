@@ -2,6 +2,9 @@
 footer
   .container
     hr
+    .twitter-btn
+      a(href="https://twitter.com/intent/tweet?screen_name=syonxv" class="twitter-mention-button" data-related="syonxv") Tweet to @syonxv
+    hr
     .meta
       a(href="https://github.com/syon" class="author").
         <img src="../assets/syon.png" alt="syon" target="_blank"><span>syon</span></a>
@@ -25,6 +28,8 @@ footer
     margin 0
     border 0
     border-top 1px solid #eee
+  .twitter-btn
+    padding 16px
   .meta
     display flex
     align-items center
