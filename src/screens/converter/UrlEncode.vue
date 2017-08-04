@@ -50,7 +50,10 @@
             | Wikipedia
         li
           a(href="https://github.com/node-modules/urlencode")
-            | NPM Module
+            | urlencode
+        li
+          a(href="https://github.com/ashtuchkin/iconv-lite")
+            | iconv-lite
 </template>
 
 <script>
