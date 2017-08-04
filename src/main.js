@@ -4,7 +4,7 @@ import Vue from 'vue';
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import 'uikit/dist/css/uikit.css';
-import './assets/uikit.theme.stylus';
+import './assets/uikit.theme.scss';
 import App from './App';
 import router from './router';
 

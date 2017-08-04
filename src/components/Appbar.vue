@@ -15,7 +15,10 @@ export default {
 
 <style lang="stylus" scoped>
 .tm-appbar
-  background linear-gradient(to left, #28a5f5, #1e87f0)
+  background linear-gradient(to right, #88c6f6, #c8d6f9, #ecfad6, #fbfef5)
+  
+  .uk-container
+    max-width inherit
   
   .uk-navbar
     min-height 40px
