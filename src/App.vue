@@ -21,6 +21,9 @@ export default {
 </script>
 
 <style lang="stylus">
+body
+  font-feature-settings "palt"
+
 .tm-main
   margin-left 240px
   padding-top 40px
