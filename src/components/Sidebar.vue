@@ -5,11 +5,11 @@
 
       li.uk-nav-header Web Tools
       li
-        router-link(to="/formatter/html/") HTML Formatter
+        router-link(to="/html-formatter/") HTML Formatter
       li
-        router-link(to="/formatter/css/") CSS Formatter
+        router-link(to="/css-formatter/") CSS Formatter
       li
-        router-link(to="/formatter/sql/") SQL Formatter
+        router-link(to="/sql-formatter/") SQL Formatter
       li
         router-link(to="/url-encode-decode/") URLエンコード・デコード
 
@@ -17,16 +17,17 @@
       li
         router-link(to="/chartjs/") Chart.js
       li
-        router-link(to="/tips/checkbox/") Checkbox
+        router-link(to="/checkbox-tips/") Checkbox
       li
-        router-link(to="/misc/pixel-color/") PixelColor
+        router-link(to="/pixel-color-picker/") Pixel Color Picker
       li
-        router-link(to="/misc/vscode-vsix/") VSCode - VSIX Downloader
+        router-link(to="/vscode-vsix-downloader/") VSCode - VSIX Downloader
 
+      li.uk-nav-header Words
       li
-        router-link(to="/words/adage/") 心に響く言葉
+        router-link(to="/adage/") 心に響く言葉
       li
-        router-link(to="/words/bless/") Words of Blessings
+        router-link(to="/words-of-blessings/") Words of Blessings
 
   .tm-author
     menu-footer
