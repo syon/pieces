@@ -5,17 +5,26 @@
 
     textarea#src.uk-textarea.block(v-model="src")
 
-    .centering
-      button#format.button-primary(@click="doFormat") Format
+    .uk-margin.centering
+      button#format.uk-button.uk-button-primary(@click="doFormat") Format
 
-    pre#dest {{ dest }}
+    .uk-position-relative
+
+      .uk-card.uk-card-default.uk-card-small.uk-card-body.uk-margin
+        pre#dest {{ dest }}
+
+      copy-to-clipboard(target="#dest")
 </template>
 
 <script>
 import jsBeautify from 'js-beautify';
+import CopyToClipboard from '@/components/CopyToClipboard';
 
 export default {
   name: 'html',
+  components: {
+    CopyToClipboard,
+  },
   data() {
     return {
       src: '<section><h1>Hello</h1></section>',
@@ -50,7 +59,7 @@ export default {
 #dest {
   height: 300px;
   padding: 5px;
-  background-color: #f5f5f5;
+  border: 0;
   overflow-x: scroll;
 }
 

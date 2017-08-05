@@ -24,4 +24,7 @@ export default {
 .tm-main
   margin-left 240px
   padding-top 40px
+
+.app-clipboard
+  font-size 12px
 </style>

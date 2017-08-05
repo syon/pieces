@@ -11,26 +11,29 @@
           .uk-form-controls
             textarea#src.uk-textarea.block(v-model="enc_src" placeholder="変換したいテキストを入力してください（改行で複数指定できます）")
 
-        .results.uk-margin
+        #app-encoded.results.uk-position-relative.uk-margin
           .uk-form-label Encoded
           .uk-card.uk-card-default.uk-card-body
             pre.line-dest
               .line(v-for="line in encodedList")
                 code {{ line.dest }}
+          copy-to-clipboard(target="#app-encoded .line-dest")
 
-        .results.uk-margin
+        #app-decoded.results.uk-position-relative.uk-margin
           .uk-form-label Decoded
           .uk-card.uk-card-default.uk-card-body
             pre.line-dest
               .line(v-for="line in decodedList")
                 code {{ line.dest }}
+          copy-to-clipboard(target="#app-decoded .line-dest")
 
-        .results.uk-margin
+        #app-parsed.results.uk-position-relative.uk-margin
           .uk-form-label Parsed Querystring
           .uk-card.uk-card-default.uk-card-body
             pre.line-dest
               .line(v-for="line in parsedList")
                 code {{ line.dest }}
+          copy-to-clipboard(target="#app-parsed .line-dest")
 
     .uk-width-1-4
       .options-header Options
@@ -58,9 +61,13 @@
 
 <script>
 import urlencode from 'urlencode';
+import CopyToClipboard from '@/components/CopyToClipboard';
 
 export default {
   name: 'url-encode',
+  components: {
+    CopyToClipboard,
+  },
   data() {
     return {
       enc_src: '',
