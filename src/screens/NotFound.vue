@@ -5,8 +5,6 @@
 
     .params
       code {{ params }}
-
-  global-footer
 </template>
 
 <script>
