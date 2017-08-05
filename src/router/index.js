@@ -16,6 +16,7 @@ import NotFound from '@/screens/NotFound';
 Vue.use(Router);
 
 const router = new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
