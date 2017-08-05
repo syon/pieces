@@ -5,35 +5,46 @@
     p Download an extension directly from the Marketplace.
 
     .alert-wrap(v-if="alrt")
-      .alert(ref="alert") {{ alrt }}
+      .uk-alert-danger(ref="alert" uk-alert) {{ alrt }}
 
-    form(v-on:submit.prevent="onSubmit")
-      .row
-        .five.columns
-          label Extension Name
-          div.vvv
-            input#extn(type="text" v-model="extn" @keyup.enter="openSearch" placeholder="extension-name" pattern="^[0-9A-Za-z_-]+$")
-            span &nbsp;
-            button#sch.button(type="button" @click="openSearch") Search
-        .three.columns
-          label Publisher
-          input#publ.u-full-width(type="text" v-model="publ" placeholder="publisher" pattern="^[0-9A-Za-z_-]+$")
-        .four.columns
-          label Version
-          div.vvv
-            input#vers(type="text" v-model="vers" placeholder="1.0.0" pattern="[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}")
-            span &nbsp;
-            button#latest.button(type="button" @click="getLatest") Latest
+    form(v-on:submit.prevent="onSubmit" uk-grid).uk-grid-medium
+      div
+        label.uk-form-label Extension Name
+        .uk-form-controls
+          input#extn.uk-input.uk-form-width-medium(type="text" v-model="extn" @keyup.enter="openSearch" placeholder="extension-name" pattern="^[0-9A-Za-z_-]+$")
+          span &nbsp;
+          button#sch.uk-button.uk-button-default(type="button" @click="openSearch") Search
+      div
+        label Publisher
+        .uk-form-controls
+          input#publ.u-full-width.uk-input(type="text" v-model="publ" placeholder="publisher" pattern="^[0-9A-Za-z_-]+$")
+      div
+        label Version
+        .uk-form-controls
+          input#vers.uk-input.uk-form-width-small(type="text" v-model="vers" placeholder="1.0.0" pattern="[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}")
+          span &nbsp;
+          button#latest.uk-button.uk-button-default(type="button" @click="getLatest") Latest
 
-      .row
-        label URL
-        pre
-          code {{ dlUrl }}
+      div
+        label.uk-form-label Item Name
+        .uk-form-controls
+          code {{ itemName }}
 
-      .row
-        button.button-primary(type="button" @click="doDownload") Download
-        span &nbsp;
-        button#oep.button(type="button" @click="openExtn") Open Extension Page
+      div
+        label.uk-form-label Badge
+        .uk-form-controls
+          a(:href="badgeLink" rel="noreferrer noopener")
+            img(:src="badgeImage" alt="Version")
+
+      div
+        label.uk-form-label URL
+        .uk-form-controls
+          pre
+            code {{ dlUrl }}
+
+      div
+        button.uk-button.uk-button-primary(type="button" @click="doDownload") Download
+        button#oep.uk-button.uk-button-default.uk-margin-left(type="button" @click="openExtn") Open Extension Page
 
     hr
 
@@ -55,12 +66,21 @@ export default {
     };
   },
   computed: {
+    itemName() {
+      return `${this.publ}.${this.extn}`;
+    },
     dlUrl() {
       const publisher = this.publ;
       const extensionName = this.extn;
       const version = this.vers;
       const url = `https://${publisher}.gallery.vsassets.io/_apis/public/gallery/publisher/${publisher}/extension/${extensionName}/${version}/assetbyname/Microsoft.VisualStudio.Services.VSIXPackage`;
       return url;
+    },
+    badgeLink() {
+      return `https://marketplace.visualstudio.com/items?itemName=${this.itemName}`;
+    },
+    badgeImage() {
+      return `https://vsmarketplacebadge.apphb.com/version/${this.itemName}.svg`;
     },
   },
   mounted() {
@@ -98,12 +118,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.alert {
-  color: red;
-  background-color: rgb(255,240,240);
-  margin-bottom: 2em;
-  padding: 1em;
-}
 input[type=text] {
   font-size: 15px;
 }
