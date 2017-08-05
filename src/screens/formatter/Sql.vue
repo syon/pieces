@@ -3,55 +3,76 @@
   .container
     h2 SQL Formatter
 
-    .row
-      .three.columns
-        label
-          input(type="checkbox" v-model="reindent" name="reindent")
-          span 改行
-        label インデント
-        .row
-          .one-third.column
-            label
-              input(type="radio" v-model="indent_width" value="2" name="indent_width")
-              span 2
-          .one-third.column
-            label
-              input(type="radio" v-model="indent_width" value="4" name="indent_width")
-              span 4
-          .one-third.column
-            label
-              input(type="radio" v-model="indent_width" value="8" name="indent_width")
-              span 8
-        label
-          input(type="checkbox" v-model="strip_comments" name="strip_comments")
-          span コメント除去
-        label 識別子
-        select.block(v-model="identifier_case" name="identifier_case")
-          option(value="") そのまま
-          option(value="upper") 大文字
-          option(value="lower" selected) 小文字
-          option(value="capitalize") 先頭のみ大文字
-        label 予約語
-        select.block(v-model="keyword_case" name="keyword_case")
-          option(value="") そのまま
-          option(value="upper" selected) 大文字
-          option(value="lower") 小文字
-          option(value="capitalize") 先頭のみ大文字
+  .container(uk-grid)
+    .uk-width-3-4
+      textarea#src.uk-textarea.block(v-model="src")
 
-      .nine.columns
-        textarea#src.uk-textarea.block(v-model="src")
+      .uk-margin.centering
+        button#format.uk-button.uk-button-primary(@click="execute" v-bind:disabled="loading") Format
 
-        .centering
-          button#format.button-primary(@click="execute" v-bind:disabled="loading") Format
+      .uk-position-relative
+        .uk-card.uk-card-default.uk-card-small.uk-card-body.uk-margin
+          pre#dest
+            code {{ dest }}
+        copy-to-clipboard(target="#dest")
 
-        pre#dest {{ dest }}
+    .uk-width-1-4
+      .options-header Options
+      form.uk-form-stacked
+        .uk-margin
+          .uk-form-label インデント
+          .uk-grid-small.uk-child-width-auto.uk-grid.uk-child-width-expand
+            label
+              input.uk-radio(type="radio" v-model="indent_width" value="2" name="indent_width")
+              span.uk-margin-small-left 2
+            label
+              input.uk-radio(type="radio" v-model="indent_width" value="4" name="indent_width")
+              span.uk-margin-small-left 4
+            label
+              input.uk-radio(type="radio" v-model="indent_width" value="8" name="indent_width")
+              span.uk-margin-small-left 8
+        .uk-margin
+          .uk-grid-small.uk-child-width-auto.uk-grid
+            label
+              input.uk-checkbox(type="checkbox" v-model="reindent" name="reindent")
+              span.uk-margin-small-left 改行
+        .uk-margin
+          .uk-grid-small.uk-child-width-auto.uk-grid
+            label
+              input.uk-checkbox(type="checkbox" v-model="strip_comments" name="strip_comments")
+              span.uk-margin-small-left コメント除去
+        .uk-margin
+          .uk-form-label 識別子
+          .uk-form-controls
+            select.uk-select(v-model="identifier_case" name="identifier_case")
+              option(value="") そのまま
+              option(value="upper") 大文字
+              option(value="lower" selected) 小文字
+              option(value="capitalize") 先頭のみ大文字
+        .uk-margin
+          .uk-form-label 予約語
+          .uk-form-controls
+            select.uk-select(v-model="keyword_case" name="keyword_case")
+              option(value="") そのまま
+              option(value="upper" selected) 大文字
+              option(value="lower") 小文字
+              option(value="capitalize") 先頭のみ大文字
+        // .uk-margin
+        //   .uk-form-label Query
+        //   .uk-form-controls
+        //     pre
+        //       code {{ query }}
 </template>
 
 <script>
 import queryString from 'query-string';
+import CopyToClipboard from '@/components/CopyToClipboard';
 
 export default {
   name: 'sql',
+  components: {
+    CopyToClipboard,
+  },
   data() {
     return {
       reindent: true,
@@ -157,11 +178,18 @@ input, select {
   height: 150px;
 }
 
-#dest {
-  min-height: 250px;
+#dest
+  height: 300px;
   padding: 5px;
-  background-color: #f5f5f5;
-}
+  border: 0;
+  overflow-x: scroll;
+
+.options-header
+  font-size 14px
+  margin-bottom 15px
+  padding 8px 0
+  font-size 12px
+  border-bottom 1px solid #e5e5e5
 
 .centering {
   text-align: center;
