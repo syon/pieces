@@ -15,11 +15,11 @@
           span &nbsp;
           button#sch.uk-button.uk-button-default(type="button" @click="openSearch") Search
       div
-        label Publisher
+        label.uk-form-label Publisher
         .uk-form-controls
           input#publ.u-full-width.uk-input(type="text" v-model="publ" placeholder="publisher" pattern="^[0-9A-Za-z_-]+$")
       div
-        label Version
+        label.uk-form-label Version
         .uk-form-controls
           input#vers.uk-input.uk-form-width-small(type="text" v-model="vers" placeholder="1.0.0" pattern="[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{1,2}")
           span &nbsp;
