@@ -11,19 +11,13 @@
     ul
       li
         a(href="https://msdn.microsoft.com/ja-jp/library/jj203843(v=vs.85).aspx") Canvas を使って画像の色をサンプリングする (Windows)
-
-  global-footer
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import ImagePath from './pixel-color.jpg';
 
 export default {
   name: 'pixel-color',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       extn: 'vscode-icons',

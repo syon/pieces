@@ -21,17 +21,11 @@
         dl
           dt お二人の永遠の愛と絆をお祈りします
           dd Wishing you both everlasting Love & Togetherness
-  global-footer
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
-
 export default {
   name: 'bless',
-  components: {
-    GlobalFooter,
-  },
 };
 </script>
 

@@ -11,19 +11,13 @@
       <div class="canvas-holder">
         <canvas id="myChart" width="250" height="125"></canvas>
       </div>
-
-  global-footer
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
 import Chart from 'chart.js';
 
 export default {
   name: 'chartjs',
-  components: {
-    GlobalFooter,
-  },
   data() {
     return {
       enc_src: '',

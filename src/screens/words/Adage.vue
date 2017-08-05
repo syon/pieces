@@ -151,17 +151,11 @@
       p.text-center
         | Respect for 
         a(href="https://www.google.co.jp/search?q=20%E4%B8%96%E7%B4%80%E3%83%9C%E3%83%A4%E3%83%BC%E3%82%B8&safe=off&qscrl=1&source=lnms&tbm=isch&sa=X") THE 20TH CENTURY VOYAGE
-  global-footer
 </template>
 
 <script>
-import GlobalFooter from '@/components/GlobalFooter';
-
 export default {
   name: 'adage',
-  components: {
-    GlobalFooter,
-  },
 };
 </script>
 

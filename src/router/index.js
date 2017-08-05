@@ -2,7 +2,6 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Hello from '@/screens/Hello';
 import Chartjs from '@/screens/chartjs/Chartjs';
-import FormatterIndex from '@/screens/formatter/Index';
 import FormatterHtml from '@/screens/formatter/Html';
 import FormatterCss from '@/screens/formatter/Css';
 import FormatterSql from '@/screens/formatter/Sql';
@@ -31,43 +30,37 @@ const router = new Router({
       meta: { title: 'Chart.js' },
     },
     {
-      path: '/formatter/',
-      name: 'FormatterIndex',
-      component: FormatterIndex,
-      meta: { title: 'Formatter' },
-    },
-    {
-      path: '/formatter/html/',
+      path: '/html-formatter/',
       name: 'FormatterHtml',
       component: FormatterHtml,
       meta: { title: 'HTML Formatter' },
     },
     {
-      path: '/formatter/css/',
+      path: '/css-formatter/',
       name: 'FormatterCss',
       component: FormatterCss,
       meta: { title: 'CSS Formatter' },
     },
     {
-      path: '/formatter/sql/',
+      path: '/sql-formatter/',
       name: 'FormatterSql',
       component: FormatterSql,
       meta: { title: 'SQL Formatter' },
     },
     {
-      path: '/tips/checkbox/',
+      path: '/checkbox-tips/',
       name: 'Checkbox',
       component: Checkbox,
       meta: { title: 'Checkbox' },
     },
     {
-      path: '/words/adage/',
+      path: '/adage/',
       name: 'WordsAdage',
       component: WordsAdage,
       meta: { title: '心に響く言葉' },
     },
     {
-      path: '/words/bless/',
+      path: '/words-of-blessings/',
       name: 'WordsBless',
       component: WordsBless,
       meta: { title: 'Words of Blessings' },
@@ -79,13 +72,13 @@ const router = new Router({
       meta: { title: 'URLエンコード・デコード' },
     },
     {
-      path: '/misc/pixel-color/',
-      name: 'PixelColor',
+      path: '/pixel-color-picker/',
+      name: 'PixelColorPicker',
       component: PixelColor,
       meta: { title: 'Pixel Color Picker' },
     },
     {
-      path: '/misc/vscode-vsix/',
+      path: '/vscode-vsix-downloader/',
       name: 'Vsix',
       component: Vsix,
       meta: { title: 'VSCode - VSIX Downloader' },
