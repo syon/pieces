@@ -1,6 +1,6 @@
 <template lang="pug">
 .screen
-  h2 Hello
+  h2 Pieces
 
 </template>
 
