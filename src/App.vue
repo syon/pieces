@@ -22,6 +22,7 @@ export default {
 
 <style lang="stylus">
 body
+  min-width 960px
   font-feature-settings "palt"
 
 .tm-main
