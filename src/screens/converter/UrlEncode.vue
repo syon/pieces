@@ -57,16 +57,19 @@
         li
           a(href="https://github.com/ashtuchkin/iconv-lite")
             | iconv-lite
+      adsense(ad-client="ca-pub-2136746860059501" ad-slot="9805871014" ad-style="display:block" ad-format="auto")
 </template>
 
 <script>
 import urlencode from 'urlencode';
 import CopyToClipboard from '@/components/CopyToClipboard';
+import Adsense from '@/components/AdSense';
 
 export default {
   name: 'url-encode',
   components: {
     CopyToClipboard,
+    Adsense,
   },
   data() {
     return {
