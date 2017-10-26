@@ -31,4 +31,7 @@ body
 
 .app-clipboard
   font-size 12px
+
+ins
+  background inherit
 </style>
