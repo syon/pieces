@@ -27,14 +27,6 @@
                 code {{ line.dest }}
           copy-to-clipboard(target="#app-decoded .line-dest")
 
-        #app-parsed.results.uk-position-relative.uk-margin
-          .uk-form-label Parsed Querystring
-          .uk-card.uk-card-default.uk-card-body
-            pre.line-dest
-              .line(v-for="line in parsedList")
-                code {{ line.dest }}
-          copy-to-clipboard(target="#app-parsed .line-dest")
-
     .uk-width-1-4
       .options-header Options
       form.uk-form-stacked
@@ -94,16 +86,6 @@ export default {
       return list.filter(d => d !== '').map((d) => {
         try {
           return { dest: urlencode.decode(d, this.enc_charset) };
-        } catch (e) {
-          return { dest: 'error' };
-        }
-      });
-    },
-    parsedList() {
-      const list = this.enc_src.split('\n');
-      return list.filter(d => d !== '').map((d) => {
-        try {
-          return { dest: urlencode.parse(d, this.enc_charset) };
         } catch (e) {
           return { dest: 'error' };
         }
