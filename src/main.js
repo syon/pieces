@@ -2,6 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueAnalytics from 'vue-analytics';
+import 'babel-polyfill';
 import UIkit from 'uikit';
 import Icons from 'uikit/dist/js/uikit-icons';
 import Clipboard from 'clipboard';

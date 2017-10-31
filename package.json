@@ -11,6 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "chart.js": "^2.6.0",
     "clipboard": "^1.7.1",
     "jquery": "^3.2.1",
