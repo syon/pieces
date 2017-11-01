@@ -9,6 +9,7 @@ import Checkbox from '@/screens/tips/Checkbox';
 import WordsAdage from '@/screens/words/Adage';
 import WordsBless from '@/screens/words/Bless';
 import UrlEncode from '@/screens/converter/UrlEncode';
+import Base64Encode from '@/screens/converter/Base64Encode';
 import PixelColor from '@/screens/misc/PixelColor';
 import Vsix from '@/screens/misc/Vsix';
 
@@ -63,6 +64,12 @@ export default new Router({
       name: 'WordsBless',
       component: WordsBless,
       meta: { title: 'Words of Blessings' },
+    },
+    {
+      path: '/base64-encode-decode/',
+      name: 'Base64Encode',
+      component: Base64Encode,
+      meta: { title: 'Base64エンコード・デコード' },
     },
     {
       path: '/url-encode-decode/',
