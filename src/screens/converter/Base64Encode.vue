@@ -6,8 +6,8 @@
   .container(uk-grid)
     .uk-width-3-4
       .uk-card
-        form.uk-form-stacked
-          .uk-form-label Input
+        .uk-form-stacked
+          .uk-form-label Input (Text)
           .uk-form-controls
             textarea#src.uk-textarea.block(v-model="enc_src" placeholder="変換したいテキストを入力してください（改行で複数指定できます）")
 
@@ -19,6 +19,11 @@
                 code {{ line.dest }}
           copy-to-clipboard(target="#app-encoded .line-dest")
 
+        .uk-form-stacked
+          .uk-form-label Input (Text)
+          .uk-form-controls
+            textarea#src.uk-textarea.block(v-model="dec_src" placeholder="変換したいテキストを入力してください（改行で複数指定できます）")
+
         #app-decoded.results.uk-position-relative.uk-margin
           .uk-form-label Decoded
           .uk-card.uk-card-default.uk-card-body
@@ -26,6 +31,31 @@
               .line(v-for="line in decodedList")
                 code {{ line.dest }}
           copy-to-clipboard(target="#app-decoded .line-dest")
+
+        .uk-form-stacked
+          .uk-form-label Input (Image)
+          .uk-form-controls
+            input(type="file" @change="onFileChange")
+            div
+              img(:src="base64edImage" style="max-width:150px;")
+
+        #app-encoded-img.results.uk-position-relative.uk-margin
+          .uk-form-label Encoded (Image)
+          .uk-card.uk-card-default.uk-card-body(style="max-height:150px;overflow:auto;")
+            pre.line-dest
+              .line
+                code {{ base64edImage }}
+          copy-to-clipboard(target="#app-encoded-img .line-dest")
+
+        .uk-form-stacked
+          .uk-form-label Input (Base64 Image)
+          .uk-form-controls
+            textarea#src.uk-textarea.block(v-model="dec_img_src" placeholder="変換したいテキストを入力してください（改行で複数指定できます）")
+
+        #app-decoded-img.results.uk-position-relative.uk-margin
+          .uk-form-label Show Image
+          .uk-card.uk-card-default.uk-card-body
+            img(:src="dec_img_src" style="max-height:500px;")
 
     .uk-width-1-4
       .options-header Links
@@ -53,7 +83,9 @@ export default {
   data() {
     return {
       enc_src: '',
-      enc_dest: '',
+      dec_src: '',
+      base64edImage: '',
+      dec_img_src: '',
     };
   },
   computed: {
@@ -68,7 +100,7 @@ export default {
       });
     },
     decodedList() {
-      const list = this.enc_src.split('\n');
+      const list = this.dec_src.split('\n');
       return list.filter(d => d !== '').map((d) => {
         try {
           if (d.match(/^[A-Za-z0-9+/=]+$/)) {
@@ -79,6 +111,30 @@ export default {
           return { dest: 'error' };
         }
       });
+    },
+    destImg() {
+      return this.base64edImage;
+    },
+    uriImage() {
+      return this.base64edImage;
+    },
+  },
+  methods: {
+    onFileChange(e) {
+      const files = e.target.files || e.dataTransfer.files;
+      if (!files.length) { return; }
+      this.createImage(files[0]);
+    },
+    createImage(file) {
+      const reader = new FileReader();
+      const vm = this;
+      reader.onload = (e) => {
+        vm.base64edImage = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    },
+    removeImage() {
+      this.base64edImage = '';
     },
   },
 };
