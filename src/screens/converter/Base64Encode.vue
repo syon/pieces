@@ -6,6 +6,8 @@
   .container(uk-grid)
     .uk-width-3-4
       .uk-card
+        h3.uk-heading-line
+          span エンコード
         .uk-form-stacked
           .uk-form-label Input (Text)
           .uk-form-controls
@@ -19,6 +21,8 @@
                 code {{ line.dest }}
           copy-to-clipboard(target="#app-encoded .line-dest")
 
+        h3.uk-heading-line
+          span デコード
         .uk-form-stacked
           .uk-form-label Input (Text)
           .uk-form-controls
@@ -32,6 +36,8 @@
                 code {{ line.dest }}
           copy-to-clipboard(target="#app-decoded .line-dest")
 
+        h3.uk-heading-line
+          span 画像のエンコード
         .uk-form-stacked
           .uk-form-label Input (Image)
           .uk-form-controls
@@ -47,10 +53,12 @@
                 code {{ base64edImage }}
           copy-to-clipboard(target="#app-encoded-img .line-dest")
 
+        h3.uk-heading-line
+          span Base64画像の表示
         .uk-form-stacked
           .uk-form-label Input (Base64 Image)
           .uk-form-controls
-            textarea#src.uk-textarea.block(v-model="dec_img_src" placeholder="変換したいテキストを入力してください（改行で複数指定できます）")
+            textarea#src.uk-textarea.block(v-model="dec_img_src" placeholder="data:image/png;base64,AAAAAAAAAAAA...")
 
         #app-decoded-img.results.uk-position-relative.uk-margin
           .uk-form-label Show Image
