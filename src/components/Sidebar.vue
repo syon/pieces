@@ -11,21 +11,21 @@
       li
         router-link(to="/sql-formatter/") SQL Formatter
       li
-        router-link(to="/base64-encode-decode/") Base64エンコード・デコード
-      li
         router-link(to="/url-encode-decode/") URLエンコード・デコード
-
-      li.uk-nav-header Code
       li
-        router-link(to="/chartjs/") Chart.js
-      li
-        router-link(to="/checkbox-tips/") Checkbox
-      li
-        router-link(to="/pixel-color-picker/") Pixel Color Picker
+        router-link(to="/base64-encode-decode/") Base64エンコード・デコード
       li
         router-link(to="/vscode-vsix-downloader/") VSCode - VSIX Downloader
 
+      li.uk-nav-header Code
+      li
+        router-link(to="/pixel-color-picker/") Pixel Color Picker
+      li
+        router-link(to="/chartjs/") Chart.js
+
       li.uk-nav-header Words
+      // li
+      //   router-link(to="/checkbox-tips/") Checkbox
       li
         router-link(to="/adage/") 心に響く言葉
       li
