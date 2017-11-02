@@ -62,6 +62,11 @@
         //   .uk-form-controls
         //     pre
         //       code {{ query }}
+      .options-header Links
+      ul
+        li
+          a(href="https://sqlformat.org/api/")
+            | SQL Formatter API
 </template>
 
 <script>
