@@ -15,6 +15,8 @@
       li
         router-link(to="/base64-encode-decode/") Base64エンコード・デコード
       li
+        router-link(to="/entity-encode-decode/") 文字実体参照エンコード・デコード
+      li
         router-link(to="/vscode-vsix-downloader/") VSCode - VSIX Downloader
 
       li.uk-nav-header Code

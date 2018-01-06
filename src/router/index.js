@@ -10,6 +10,7 @@ import WordsAdage from '@/screens/words/Adage';
 import WordsBless from '@/screens/words/Bless';
 import UrlEncode from '@/screens/converter/UrlEncode';
 import Base64Encode from '@/screens/converter/Base64Encode';
+import EntityEncode from '@/screens/converter/EntityEncode';
 import PixelColor from '@/screens/misc/PixelColor';
 import Vsix from '@/screens/misc/Vsix';
 
@@ -76,6 +77,12 @@ export default new Router({
       name: 'UrlEncode',
       component: UrlEncode,
       meta: { title: 'URLエンコード・デコード' },
+    },
+    {
+      path: '/entity-encode-decode/',
+      name: 'EntityEncode',
+      component: EntityEncode,
+      meta: { title: '文字実体参照エンコード・デコード' },
     },
     {
       path: '/pixel-color-picker/',
